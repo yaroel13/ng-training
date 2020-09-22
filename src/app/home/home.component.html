@@ -1,5 +1,18 @@
-<div fxLayout="column" fxFill fxLayoutAlign="center center">
+<!-- <div fxLayout="column" fxFill fxLayoutAlign="center center">
   <h1>
     THIS IS MY HOME COMPONENT
   </h1>
+</div> -->
+
+<div fxLayout.gt-md="row" fxLayout.lt-md="column" fxFill>
+  <div fxFlex="40%" style="font-size: 32pt; padding: 20px 20px 20px 20px;">
+
+    <app-my-user-list [dataSet]="users" (selectItemEvent)="onSelect($event)"></app-my-user-list>
+
+  </div>
+  <div fxLayout="column" fxFlex="60%" style="font-size: 32pt; padding: 20px 20px 20px 20px;" fxLayoutAlign="center center">
+
+    <app-my-user-description [selectedItem]="selectedUser"></app-my-user-description>
+
+  </div>
 </div>

@@ -1,0 +1,5 @@
+<mat-nav-list>
+  <mat-list-item *ngFor= "let user of dataSet" (click)="onSelect(user)">
+    {{user.name}}
+  </mat-list-item>
+</mat-nav-list>

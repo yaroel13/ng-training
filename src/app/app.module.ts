@@ -9,7 +9,10 @@ import { HomeComponent } from './home/home.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatButton, MatButtonModule } from '@angular/material';
+import { MatButton, MatButtonModule, MatListModule } from '@angular/material';
+import { MyUserDescriptionComponent } from './home/my-user-description/my-user-description.component';
+import { MyUserListComponent } from './home/my-user-list/my-user-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,7 +20,9 @@ import { MatButton, MatButtonModule } from '@angular/material';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    MyUserDescriptionComponent,
+    MyUserListComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,9 @@ import { MatButton, MatButtonModule } from '@angular/material';
     FlexLayoutModule,
     MatToolbarModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
